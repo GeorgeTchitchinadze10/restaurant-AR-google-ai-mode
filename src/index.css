@@ -1,1 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 @import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-accent: #ffcc00;
+  --color-card: #1e1e1e;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+/* Custom CSS to hide default AR button if needed, we'll use custom buttons */
+model-viewer::part(default-ar-button) {
+  display: none;
+}
